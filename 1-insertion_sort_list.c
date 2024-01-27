@@ -6,7 +6,7 @@
  * @m1: A pointer to the first node to swap.
  * @m2: The second node to swap.
  */
-void swapi_nodes(listint_t **h, listint_t **m1, listint_t *m2)
+void swap_nodes(listint_t **h, listint_t **m1, listint_t *m2)
 {
 	(*m1)->next = m2->next;
 	if (m2->next != NULL)
@@ -35,7 +35,7 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	for (iter = (*list)->next; i != NULL; i = tmp)
+	for (i = (*list)->next; i != NULL; i = tmp)
 	{
 		tmp = i->next;
 		insert = i->prev;
